@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Create two equal columns that floats next to each other */
+
+.column1 {
+    color: rgb(0, 1, 2);
+    float: left;
+    width: 23%;
+    padding: 10px;
+    height: 820px;
+    /* Should be removed. Only for demonstration */
+}
+
+.column2 {
+    float: left;
+    width: 77%;
+    padding: 10px;
+    height: 820px;
+    /* Should be removed. Only for demonstration */
+}
+
+.comp1 {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    height: 55%;
+    /* Should be removed. Only for demonstration */
+}
+
+.comp2 {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    height: 20%;
+    /* Should be removed. Only for demonstration */
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 100%;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.button1 {
+    width: 48%;
+    color: rgb(0, 0, 0);
+    border: 1px solid #c7ccce99;
+}
+
+.button1:hover {
+    background-color: #ffffff;
+    color: rgb(17, 0, 0);
+}
+
+.button2 {
+    width: 48%;
+    color: rgb(0, 0, 0);
+    border: 1px solid #c7ccce99;
+}
+
+.button2:hover {
+    background-color: #ffffff;
+    color: rgb(17, 0, 0);
+}
+
+.button3 {
+    height: 47px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    border: 1px solid #c7ccce99;
+}
+
+.button3:hover {
+    background-color: #f0f801;
+    color: rgb(17, 0, 0);
+}
+
+button.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.button-text {
+    display: flex;
+    align-items: center;
+}
+
+.button-index {
+    font-size: 11px;
+    margin-right: 5px;
+    position: left;
+    position: absolute;
+    /* Added position absolute */
+    left: 45px;
+    /* Adjust as needed */
+}
+
+.button-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.button-name {
+    font-size: 15px;
+    margin: 0;
+}
+
+.button-subheading {
+    font-size: 9px;
+    margin: 0.5;
+}
+
+.button-time {
+    font-size: 10px;
+    margin-left: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+}
+
+p {
+    text-align: left;
+    font-weight: bold;
+    line-height: 3px;
+}

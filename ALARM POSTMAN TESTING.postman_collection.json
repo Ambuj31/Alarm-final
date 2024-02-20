@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "d9f292bf-307d-4e00-8338-2ae5a4afc542",
+		"name": "ALARM POSTMAN TESTING",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12461457"
+	},
+	"item": [
+		{
+			"name": "GET THE DATA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/readData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"readData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get data By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/alarms/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alarms",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"status\":\"Active\",\"type\":\"Type1\",\"level\":\"High\",\"project\":\"Project1\",\"sprovider\":\"ServiceProvider1\",\"depth\":\"10\",\"indepth\":\"20\",\"systatus\":\"OK\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/readData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"readData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update data by id\\",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"status\":\"Inactive\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/alarms/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alarms",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the Data by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/readData/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"readData",
+						"17"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -10,7 +10,8 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    AlarmComponent
+    AlarmComponent,
+    
   ],
   imports: [
     BrowserModule,

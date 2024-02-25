@@ -59,6 +59,8 @@ export class AlarmComponent  implements OnInit {
   alarms: Alarm[] = []; // Initialize with an empty array
   selectedAlarm: Alarm | null = null; // Initialize selectedAlarm as null
   showEditForm = false;
+  isDeleteConfirmationOpen: boolean = false;
+  selectedAlarmForDelete: any;
   constructor(private AlarmService: AlarmService) { }
 
   ngOnInit(): void {
@@ -114,17 +116,42 @@ export class AlarmComponent  implements OnInit {
     this.showEditForm = false;
   }
 
-
-  deleteAlarm(id: number): void {
-    if (confirm('Are you sure you want to delete this alarm?')) {
-      this.AlarmService.deleteAlarm(id).subscribe(() => {
-        // Remove the deleted alarm from the local array
-        this.alarms = this.alarms.filter(a => a.id !== id);
-        console.log('Alarm deleted successfully');
-      }, error => {
-        console.error('Error deleting alarm:', error);
-        // Optionally, display an error message to the user
-      });
-    }
+  openDeleteConfirmation(alarm: any): void {
+    this.selectedAlarmForDelete = alarm;
+    this.isDeleteConfirmationOpen = true; // Set isDeleteConfirmationOpen to true when opening the modal
   }
+
+closeDeleteConfirmation(): void {
+  this.isDeleteConfirmationOpen = false;
+}
+  // deleteAlarm(id: number): void {
+  //   // if (confirm('Are you sure you want to delete this alarm?')) {
+  //     this.AlarmService.deleteAlarm(id).subscribe(() => {
+  //       // Remove the deleted alarm from the local array
+  //       this.alarms = this.alarms.filter(a => a.id !== id);
+  //       console.log('Alarm deleted successfully');
+  //     }, error => {
+  //       console.error('Error deleting alarm:', error);
+  //       // Optionally, display an error message to the user
+  //     });
+    
+  // }
+  deleteAlarm(id: number): void {
+  // Call the deleteAlarm method of your AlarmService
+  this.AlarmService.deleteAlarm(id).subscribe(
+    () => {
+      // Remove the deleted alarm from the local array
+      this.alarms = this.alarms.filter(a => a.id !== id);
+      console.log('Alarm deleted successfully');
+      // Close the delete confirmation modal
+      this.isDeleteConfirmationOpen = false;
+      this.selectedAlarmForDelete = null;
+    },
+    error => {
+      console.error('Error deleting alarm:', error);
+      // Optionally, display an error message to the user
+    }
+  );
+}
+
 }

@@ -321,14 +321,49 @@
                     </div>
                     <div class="column1" style=" width: 28%; height: 750px; margin-left: 10px;">
                         <div class="column2" style="background-color:#ffffff; width: 100%; height: 450px;">
-                            <div class="column2" style="background-color:#adadad46; width: 100%; height: 48px; padding: 2px;">
+                            <!-- <div class="column2" style="background-color:#adadad46; width: 100%; height: 48px; padding: 2px;">
                                 <button class="edit-btn" (click)="toggleEditForm()">
                                     <span>Edit</span>
                                 </button>
                                 <button class="delete-btn" (click)="deleteAlarm(selectedAlarm?.id)">
                                     <span>Delete</span>
                                 </button>
+                            </div> -->
+                            <!-- <div class="column2" style="background-color:#adadad46; width: 100%; height: 48px; padding: 2px;">
+                                <button class="edit-btn" (click)="toggleEditForm()">
+                                    <span>Edit</span>
+                                </button>
+                                <button class="delete-btn" (click)="openDeleteConfirmation(selectedAlarm)">
+                                    <span>Delete</span>
+                                </button>
                             </div>
+                            <div class="modal" *ngIf="selectedAlarmForDelete">
+                                <div class="modal-content">
+                                    <p>Are you sure you want to delete this alarm?</p>
+                                    <div class="button-group">
+                                        <button class="btn btn-primary" (click)="deleteAlarm(selectedAlarmForDelete.id)">Yes</button>
+                                        <button class="btn btn-secondary" (click)="closeDeleteConfirmation()">No</button> 
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="column2" style="background-color:#adadad46; width: 100%; height: 48px; padding: 2px;">
+                                <button class="edit-btn" (click)="toggleEditForm()">
+                                  <span>Edit</span>
+                                </button>
+                                <button class="delete-btn" (click)="openDeleteConfirmation(selectedAlarm)">
+                                  <span>Delete</span>
+                                </button>
+                              </div>
+                              <div class="modal" *ngIf="isDeleteConfirmationOpen">
+                                <div class="modal-content">
+                                  <p>Are you sure you want to delete this alarm?</p>
+                                  <div class="button-group">
+                                    <button class="btn btn-primary" (click)="deleteAlarm(selectedAlarmForDelete.id)">Yes</button>
+                                    <button class="btn btn-secondary" (click)="isDeleteConfirmationOpen = false">No</button>
+                                  </div>
+                                </div>
+                              </div>
+                              
                             <ng-container *ngIf="selectedAlarm">
                                 <div class="edit-form" *ngIf="showEditForm">
                                     <h2>Edit Alarm</h2>

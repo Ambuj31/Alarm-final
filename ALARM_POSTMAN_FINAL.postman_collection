@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "9d880001-1195-4292-9bd6-0e455839051e",
+		"name": "ALARM POSTMAN TESTING FINAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12461457"
+	},
+	"item": [
+		{
+			"name": "CREATE ALARM DETAILS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Example Alarm\",\r\n    \"phase\": \"Example Phase\",\r\n    \"well\": 5,\r\n    \"status\": \"Example Status\",\r\n    \"type\": \"Example Type\",\r\n    \"level\": \"Example Level\",\r\n    \"project\": \"Example Project\",\r\n    \"sprovider\": \"Example SProvider\",\r\n    \"depth\": 1,\r\n    \"indepth\": 2,\r\n    \"systatus\": \"Example SysStatus\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/readData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"readData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL ALARMS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/readData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"readData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALARM BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/readData/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"readData",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE ALARM",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Updated Alarm Name\",\r\n    \"phase\": \"Updated Phase\",\r\n    \"well\": 67,\r\n    \"status\": \"Updated Status\",\r\n    \"type\": \"Updated Type\",\r\n    \"level\": \"Updated Level\",\r\n    \"project\": \"Updated Project\",\r\n    \"sprovider\": \"Updated SProvider\",\r\n    \"depth\": 23,\r\n    \"indepth\": 4,\r\n    \"systatus\": \"Updated SysStatus\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/readData/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"readData",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ALARM",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/readData/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"readData",
+						"22"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

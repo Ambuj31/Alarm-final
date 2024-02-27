@@ -66,38 +66,39 @@
 // };
 
 // controller.js
-const alarmDAO = require('../dao/dao');
+// controller.js
+const service = require('../service/service');
 
 exports.getAllAlarms = async (req, res) => {
     try {
-        const alarms = await alarmDAO.getAllAlarms();
+        const alarms = await service.getAllAlarms();
         res.json(alarms);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
     }
 };
 
 exports.getAlarmById = async (req, res) => {
     const { id } = req.params;
     try {
-        const alarm = await alarmDAO.getAlarmById(id);
+        const alarm = await service.getAlarmById(id);
         if (!alarm) {
             res.status(404).json({ message: 'Alarm not found' });
             return;
         }
         res.json(alarm);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
     }
 };
 
 exports.createAlarm = async (req, res) => {
     const alarmData = req.body;
     try {
-        const alarm = await alarmDAO.createAlarm(alarmData);
+        const alarm = await service.createAlarm(alarmData);
         res.status(201).json(alarm);
-    } catch (err) {
-        res.status(400).json({ message: err.message });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
     }
 };
 
@@ -105,19 +106,19 @@ exports.updateAlarm = async (req, res) => {
     const { id } = req.params;
     const alarmData = req.body;
     try {
-        const updatedAlarm = await alarmDAO.updateAlarm(id, alarmData);
+        const updatedAlarm = await service.updateAlarm(id, alarmData);
         res.json(updatedAlarm);
-    } catch (err) {
-        res.status(400).json({ message: err.message });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
     }
 };
 
 exports.deleteAlarm = async (req, res) => {
     const { id } = req.params;
     try {
-        await alarmDAO.deleteAlarm(id);
+        await service.deleteAlarm(id);
         res.json({ message: 'Alarm deleted' });
-    } catch (err) {
-        res.status(500).json({ message: err.message });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
     }
 };

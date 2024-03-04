@@ -41,7 +41,7 @@
 //     }
 // };
 const { getAllAlarmsQuery, getAlarmByIdQuery, createAlarmQuery, updateAlarmQuery, deleteAlarmQuery } = require('../dao/dao');
-const { ALARM_NOT_FOUND, ALARM_DELETED, FAILED_TO_FETCH_ALARMS, FAILED_TO_FETCH_ALARM_BY_ID, FAILED_TO_CREATE_ALARM, FAILED_TO_UPDATE_ALARM, FAILED_TO_DELETE_ALARM, NAME_PHASE_WELL_REQUIRED } = require('../constant/message');
+const { ALARM_NOT_FOUND, ALARM_DELETED, FAILED_TO_FETCH_ALARMS, FAILED_TO_FETCH_ALARM_BY_ID, FAILED_TO_CREATE_ALARM, FAILED_TO_UPDATE_ALARM, FAILED_TO_DELETE_ALARM, NAME_PHASE_WELL_REQUIRED,RECORD_UPDATE_SUCCESS} = require('../constant/message');
 
 exports.getAllAlarms = async () => {
     try {

@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -353,7 +353,6 @@ button[type="submit"]:hover {
     background-color: #45a049; 
 }
 
-/* Add this CSS to your component's styles or CSS file */
 
 .modal {
     position: fixed;
@@ -383,4 +382,789 @@ button[type="submit"]:hover {
 
 .button-group button {
     margin: 0 10px;
+} */
+
+
+* {
+    box-sizing: border-box;
+    font-family: Arial
 }
+/* Create two equal columns that floats next to each other */
+
+.column1 {
+    color: rgb(0, 1, 2);
+    float: left;
+    width: 23%;
+    padding: 10px;
+    height: 820px;
+    /* Should be removed. Only for demonstration */
+}
+
+.column2 {
+    float: left;
+    width: 77%;
+    padding: 10px;
+    height: 820px;
+    /* Should be removed. Only for demonstration */
+}
+
+.comp1 {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    height: 62%;
+    margin-left: 20px;
+    border-style: solid;
+    border-color: rgba(152, 152, 152, 0.225);
+    border-width: 2px;
+    border-radius: 4px;
+}
+
+.comp2 {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    height: 25%;
+    border-style: solid;
+    border-color: rgba(152, 152, 152, 0.225);
+    border-width: 2px;
+    border-radius: 6px;
+}
+
+.comp3 {
+    width: 84%;
+    padding-top: 0px;
+    height: 24%;
+    margin-top: 1%;
+    margin-left: 5%;
+    background-color: #b3ff001d;
+    border: 2px rgb(212, 255, 0);
+    border-style: solid;
+    border-radius: 7px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 100%;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.button1 {
+    width: 47%;
+    color: rgb(0, 0, 0);
+    border: 1px solid #c7ccce99;
+}
+
+.button1:hover {
+    background-color: #ffffff;
+    color: rgb(17, 0, 0);
+}
+
+.button2 {
+    width: 47%;
+    color: rgb(0, 0, 0);
+    border: 1px solid #c7ccce99;
+}
+
+.button2:hover {
+    background-color: #ffffff;
+    color: rgb(17, 0, 0);
+}
+
+.button3 {
+    height: 50px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    border: 1px solid #c7ccce99;
+}
+
+.button3:hover {
+    background-color: #f0f801;
+    color: rgb(17, 0, 0);
+}
+
+button.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.button-text {
+    display: flex;
+    align-items: center;
+}
+
+.button-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.button-name {
+    font-size: 12px;
+    margin: 0;
+    margin-left: 46px;
+    color: #000;
+    margin-top: 3px;
+}
+
+.button-subheading {
+    font-size: 8.5px;
+    margin-left: 46px;
+    margin-top: 5px;
+    font-weight: normal;
+    margin-bottom: 9px;
+    color: #676767;
+    word-spacing: 1.6px;
+    letter-spacing: 0.4px;
+}
+
+.button-index {
+    font-size: 11px;
+    margin-right: 5px;
+    position: left;
+    position: absolute;
+    /* Added position absolute */
+    left: 45px;
+    /* Adjust as needed */
+    margin-top: 4px;
+}
+
+.button-time {
+    font-size: 9px;
+    color: #505050;
+    font-weight: normal;
+    float: right;
+    margin-top: -16px;
+    margin-right: 2px;
+    font-size: 10px;
+    margin-left: 240px;
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: -1px;
+    text-align: left;
+}
+
+p {
+    text-align: left;
+    font-weight: bold;
+    line-height: 3px;
+}
+
+.data {
+    text-align: left;
+    font-weight: bold;
+    line-height: 3px;
+    font-size: 12px;
+    padding-left: 7px;
+}
+
+.text {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+    margin-top: -15px;
+    padding-right: 20px;
+    flex: 1;
+    margin-left: 1.5rem
+}
+
+.redtext {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    margin-top: -15px;
+    padding-right: 20px;
+    color: red;
+    flex: 1;
+}
+
+li {
+    list-style: none;
+}
+
+.button-table {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.selected {
+    /* Add your selected button style, e.g., background color */
+    background-color: #ff0062; /* Replace 'your-selected-color' with your desired color */
+}
+
+.hovered  {
+    /* Add your hover button style */
+    background-color: #4b8f54; /* Replace 'your-hover-color' with your desired hover color */
+}
+.button-cell {
+    padding: 6px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.button-cell:hover {
+    background-color: #ff0062;
+    /* Change background color on hover to yellow */
+}
+
+
+.subtitle {
+    color: gray;
+    font-weight: normal;
+    font-size: 0.6rem;
+    margin-bottom: 25px;
+    margin-top: -5px;
+}
+
+.edit-btn {
+    background-color: rgb(233, 230, 230);
+    /* Initial state */
+    border: solid;
+    padding: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 45%;
+    border-radius: 5px;
+    border-color: #e1e1e1;
+    margin-right: 10px;
+    margin-left: 7px;
+    border-width: 1px;
+}
+
+.delete-btn {
+    background-color: rgb(233, 230, 230);
+    /* Initial state */
+    border: solid;
+    padding: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 45%;
+    border-radius: 5px;
+    border-color: #e1e1e1;
+    margin-right: 7px;
+    border-width: 1px;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    background-color: #fff;
+    font-weight: bold;
+    /* Hover state - turns white */
+}
+
+.edit-form-container {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-group button {
+    margin: 0 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #e60202;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #cbcbcb;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h5 {
+    font-size: 13px;
+    color: #a0a0a0;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.recent {
+    font-size: 11px;
+    color: #a0a0a0;
+    font-weight: normal;
+    float: right;
+    margin-top: 4.5rem;
+    margin-right: 9px;
+    padding-right: 10px;
+}
+
+form {
+    font-family: Arial, sans-serif;
+}
+
+input[type="text"],
+textarea {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.circle-button {
+    width: 70px;
+    height: 70px;
+    border-radius: 70%;
+    background-color: white;
+    border: 2px solid rgb(212, 255, 0);
+    margin-left: -35px;
+    margin-top: -35px;
+    text-shadow: 2px 2px;
+}
+
+.lefttext {
+    text-align: left;
+    margin-left: 7%;
+    line-height: 2;
+    font-size: 14px;
+}
+
+img {
+    width: 15px;
+    float: right;
+    margin-right: 25px;
+}
+
+.img2 {
+    width: 20px;
+    float: left;
+    margin-left: -20px;
+    margin-top: 2px;
+}
+
+.imgarrow1 {
+    width: 10px;
+    float: right;
+    margin-right: 90px;
+    margin-top: -2rem;
+}
+
+.imgarrow2 {
+    width: 10px;
+    float: right;
+    margin-right: -9rem;
+    margin-top: 4px;
+}
+
+.imgfilter {
+    width: 12px;
+    float: right;
+    margin-right: 10.5rem;
+    margin-top: 3.5px;
+}
+
+.imgrecent {
+    width: 14px;
+    float: right;
+    margin-right: -9px;
+    margin-top: 3px;
+    padding-left: 5px;
+}
+
+table.table1 {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.table1 td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+}
+
+p {
+    text-align: left;
+    font-weight: bold;
+    line-height: 3px;
+    font-size: 14px;
+}
+
+li {
+    list-style: none;
+}
+
+.plain-text {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 8px;
+    color: black;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+table.table2 {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 82%;
+    margin-left: 6%;
+    table-layout: fixed;
+    font-size: 12px;
+}
+
+table.table2 th,
+table.table2 td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    width: 17%;
+}
+
+table.table2 th {
+    background-color: #f1f1f1;
+}
+
+table.table2 td {
+    background-color: #eee;
+    font-size: 10px;
+    text-align: left;
+    height: 15px;
+}
+
+table.table2 tr {
+    width: 8px;
+}
+
+table.table2 tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.header h2 {
+    font-size: 20px;
+    margin-bottom: 0.5em;
+}
+
+.button4 {
+    background-color: #eee;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+}
+
+.button5 {
+    background-color: #d4ff70;
+    position: sticky;
+    margin-bottom: -101px;
+}
+
+.dot {
+    height: 60px;
+    width: 60px;
+    background-color: #ffffff;
+    border-color: #eeff00;
+    border-style: solid;
+    border-radius: 50%;
+    ;
+    margin-bottom: -50px;
+    display: inline-block;
+}
+
+.red-underline {
+    font-size: 10px;
+    color: red;
+    text-decoration: underline;
+    float: right;
+    margin-top: 7px;
+    padding-right: 7px;
+}
+
+.custom-button:focus {
+    /* Your hover styles here */
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.snooze {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 32px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    float: right;
+    margin-top: 7px;
+    padding-right: -10px;
+    color: #000000;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border-color: #e2e2e2;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 16px;
+}
+
+.acknowledge {
+    background-color: #f00;
+    border: none;
+    padding: 12px 32px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    float: right;
+    margin-top: 7px;
+    padding-right: -10px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    border-color: #e2e2e2;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 16px;
+    margin-right: 5rem;
+}
+
+.hr-2 {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 1rem;
+    margin-inline-start: auto;
+    margin-inline-end: 5rem;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 0.3px;
+    color: #e8e8e8;
+    border-top: 0.3px solid #e8e8e8;
+    border-bottom: 0.3px solid #e8e8e8;
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 0.5px;
+    color: #e8e8e8;
+    border-top: 0.3px solid #e8e8e8;
+    border-bottom: 0.3px solid #e8e8e8;
+}
+
+.red-text {
+    color: red;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+}
+
+.red-superscript {
+    vertical-align: top;
+    border-style: solid;
+    border-radius: 16px;
+    border-width: 1px;
+    color: red;
+    font-size: 10px;
+    width: 55px;
+    height: 16px;
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+
+.button-container {
+    display: flex;
+    float: right;
+    margin-top: -50px;
+    height: 5%;
+    margin-right: 1.5rem;
+    border-width: 1px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.rectangular-button {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 10px 20px;
+    width: 140%;
+    float: right;
+    border: none;
+    border-right: 1px solid #ccc;
+}
+
+.imgboxarrow {
+    width: 23px;
+    float: left;
+    padding-left: 9px;
+    padding-right: 4px;
+}
+
+.imgboxshare {
+    width: 15px;
+    float: left;
+    padding-left: 4px;
+    margin-right: -7px;
+    margin-top: 2px;
+}
+
+.squarish-button {
+    color: white;
+    padding: 8px;
+    width: 29%;
+    border: none;
+    /* Adjust spacing 
+    between buttons */
+}   
+
+.filter-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: none;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .filter-dropdown {
+    position: relative;
+  }
+  
+  .filter-dropdown select {
+    width: 160px;
+    margin-bottom: 10px; 
+    padding: 10px;
+    border: none;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .filter-dropdown select:hover {
+    background-color: #ddd;
+  }
+  
+  .filter-dropdown select:focus {
+    outline: none;
+  }
+  
+  .filter-dropdown option {
+    padding: 10px;
+  }
+  
+  .filter-dropdown option:hover {
+    background-color: #ddd;
+  }
+  

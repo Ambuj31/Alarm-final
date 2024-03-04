@@ -11,6 +11,7 @@ export interface Alarm {
     systatus: string;
     name : string;
     well : string;
-    phase : string
+    phase : string;
+    priority: string
   }
   

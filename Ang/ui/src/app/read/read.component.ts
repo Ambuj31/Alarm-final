@@ -60,8 +60,6 @@ export class AlarmComponent  implements OnInit {
   selectedAlarm: Alarm | null = null; // Initialize selectedAlarm as null
   originalAlarm: Alarm | null = null; // Store the original state of the selected alarm
   showEditForm = false;
-  freezeBackground = false; 
-  isBackgroundFrozen = false;
   isDeleteConfirmationOpen: boolean = false;
   selectedAlarmForDelete: any;
   showFilterOptions: boolean = false;
@@ -158,12 +156,12 @@ export class AlarmComponent  implements OnInit {
 openDeleteConfirmation(alarm: any): void {
   this.selectedAlarmForDelete = alarm;
   this.isDeleteConfirmationOpen = true;
-  this.isBackgroundFrozen = true; // Freeze background when delete confirmation is opened
+
 }
 
 closeDeleteConfirmation(): void {
   this.isDeleteConfirmationOpen = false;
-  this.isBackgroundFrozen = false; // Unfreeze background when delete confirmation is closed
+ 
 }
 
 

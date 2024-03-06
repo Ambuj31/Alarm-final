@@ -1178,4 +1178,34 @@ hr {
     z-index: 999; /* Ensure it's above other content */
     pointer-events: auto; /* Enable pointer events to prevent interaction with underlying content */
   }
+  /* Add this CSS to your existing stylesheet or create a new one */
+
+/* Style for the dropdown container */
+.form-group select {
+    width: 100%; /* Set the width to fill the container */
+    padding: 8px; /* Add padding for better appearance */
+    font-size: 16px; /* Set font size */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Add border radius */
+    box-sizing: border-box; /* Ensure the select box includes padding and border in its total width */
+  }
+  
+  /* Style for the dropdown options */
+  .form-group select option {
+    padding: 8px; /* Add padding for better appearance */
+  }
+  
+  /* Style for the dropdown arrow */
+  .form-group select:after {
+    content: '\25BC'; /* Unicode character for a down arrow */
+    position: absolute; /* Position the arrow */
+    top: 30%; /* Adjust vertical position */
+    right: 10px; /* Adjust horizontal position */
+  }
+  
+  /* Style for the dropdown when it's focused */
+  .form-group select:focus {
+    outline: none; /* Remove default focus styling */
+    border-color: #007bff; /* Change border color when focused */
+  }
   

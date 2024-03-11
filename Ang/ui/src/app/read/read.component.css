@@ -1,403 +1,13 @@
-/* * {
-    box-sizing: border-box;
-}
-
-.column1 {
-    color: rgb(0, 1, 2);
-    float: left;
-    width: 23%;
-    padding: 10px;
-    height: 1100px;
-}
-
-.column2 {
-    float: left;
-    width: 77%;
-    padding: 10px;
-    height: 1100px;
-}
-
-.comp1 {
-    float: left;
-    width: 100%;
-    padding: 5px;
-    height: 55%;
-}
-
-.comp2 {
-    float: left;
-    width: 100%;
-    padding: 20px;
-    height: 25%;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-    height: 100%;
-}
-
-img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
-}
-
-.button {
-    border: none;
-    color: white;
-    padding: 10px 50px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 2px 2px;
-    transition-duration: 0.2s;
-    cursor: pointer;
-}
-
-.button1 {
-    width: 47%;
-    color: rgb(0, 0, 0);
-    border: 1px solid #c7ccce99;
-}
-
-.button1:hover {
-    background-color: #ffffff;
-    color: rgb(17, 0, 0);
-}
-
-.button2 {
-    width: 47%;
-    color: rgb(0, 0, 0);
-    border: 1px solid #c7ccce99;
-}
-
-.button2:hover {
-    background-color: #ffffff;
-    color: rgb(17, 0, 0);
-}
-
-.button3 {
-    height: 50px;
-    width: 100%;
-    color: rgb(0, 0, 0);
-    border: 1px solid #c7ccce99;
-}
-
-.button3:hover {
-    background-color: #f0f801;
-    color: rgb(17, 0, 0);
-}
-
-button.truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.button-text {
-    display: flex;
-    align-items: center;
-}
-
-.button-index {
-    font-size: 11px;
-    margin-right: 5px;
-    position: left;
-    position: absolute;
-    left: 45px;
-}
-
-.button-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.button-name {
-    font-size: 12px;
-    margin: 0;
-    margin-left: 46px;
-}
-
-.button-subheading {
-    font-size: 9px;
-    margin-left: 46px;
-}
-
-.button-time {
-    font-size: 10px;
-    margin-left: 240px;
-}
-
-.topright {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-    font-size: 18px;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td {
-    padding: 8px;
-    text-align: center;
-    border-bottom: 1px solid #cccccc;
-}
-
-p {
-    text-align: left;
-    font-weight: bold;
-    line-height: 3px;
-}
-
-li {
-    list-style: none;
-}
-
-.plain-text {
-    font-weight: normal;
-}
-
-tr:hover {
-    background-color: rgb(139, 212, 149);
-}
-
-.button-table {
-    display: flex;
-    flex-direction: column;
-}
-
-.button-cell {
-    padding: 6px;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
-}
-
-.button-cell:hover {
-    background-color: #99eb4d;
-}
-
-.edit-btn,
-.delete-btn {
-  background-color: #4CAF50; 
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.edit-btn:hover,
-.delete-btn:hover {
-  background-color: #45a049; 
-}
-
-.edit-btn span,
-.delete-btn span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.edit-btn span:after,
-.delete-btn span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.edit-btn:hover span,
-.delete-btn:hover span {
-  padding-right: 25px;
-}
-
-.edit-btn:hover span:after,
-.delete-btn:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-.edit-form-container {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.button-group {
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background-color: #a7ee65;
-    color: #fff;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-    color: #fff;
-}
-
-body {
-    font-family: Arial, sans-serif; 
-    color: #333; 
-}
-
-h2 {
-    font-size: 24px; 
-    color: #0066cc; 
-}
-
-h5 {
-    font-size: 18px; 
-    color: #009933;
-}
-
-.button-name {
-    font-size: 20px; 
-    font-weight: bold; 
-    color: #ee0083; 
-}
-
-.button-subheading {
-    font-size: 14px; 
-    color: #666; 
-}
-
-.plain-text {
-    font-size: 16px; 
-    color: #000; 
-}
-
-.edit-btn,
-.delete-btn {
-    background-color: #ee0093; 
-    color: #fff; 
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    cursor: pointer;  
-    margin-right: 10px; 
-}
-
-.edit-btn:hover,
-.delete-btn:hover {
-    background-color: #48ff00; 
-}
-
-form {
-    font-family: Arial, sans-serif; 
-}
-
-
-input[type="text"],
-textarea {
-    font-size: 16px; 
-    padding: 8px; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button[type="submit"] {
-    background-color: #4caf50; 
-    color: white; 
-    padding: 10px 20px; 
-    border: none;
-    border-radius: 4px; 
-    cursor: pointer; 
-}
-
-
-button[type="submit"]:hover {
-    background-color: #45a049; 
-}
-
-
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.modal-content {
-    text-align: center;
-}
-
-.modal-content p {
-    margin-bottom: 20px;
-}
-
-.button-group {
-    display: flex;
-    justify-content: center;
-}
-
-.button-group button {
-    margin: 0 10px;
-} */
-
-
 * {
     box-sizing: border-box;
     font-family: Arial
 }
-/* Create two equal columns that floats next to each other */
-
 .column1 {
     color: rgb(0, 1, 2);
     float: left;
     width: 23%;
     padding: 10px;
     height: 820px;
-    /* Should be removed. Only for demonstration */
 }
 
 .column2 {
@@ -405,7 +15,6 @@ button[type="submit"]:hover {
     width: 77%;
     padding: 10px;
     height: 820px;
-    /* Should be removed. Only for demonstration */
 }
 
 .comp1 {
@@ -538,9 +147,7 @@ button.truncate {
     margin-right: 5px;
     position: left;
     position: absolute;
-    /* Added position absolute */
     left: 45px;
-    /* Adjust as needed */
     margin-top: 4px;
 }
 
@@ -617,13 +224,11 @@ li {
 }
 
 .selected {
-    /* Add your selected button style, e.g., background color */
-    background-color: #ff0062; /* Replace 'your-selected-color' with your desired color */
+    background-color: #ff0062; 
 }
 
 .hovered  {
-    /* Add your hover button style */
-    background-color: #4b8f54; /* Replace 'your-hover-color' with your desired hover color */
+    background-color: #4b8f54; 
 }
 .button-cell {
     padding: 6px;
@@ -633,7 +238,6 @@ li {
 
 .button-cell:hover {
     background-color: #ff0062;
-    /* Change background color on hover to yellow */
 }
 
 
@@ -647,7 +251,6 @@ li {
 
 .edit-btn {
     background-color: rgb(233, 230, 230);
-    /* Initial state */
     border: solid;
     padding: 8px;
     font-size: 1rem;
@@ -663,7 +266,6 @@ li {
 
 .delete-btn {
     background-color: rgb(233, 230, 230);
-    /* Initial state */
     border: solid;
     padding: 8px;
     font-size: 1rem;
@@ -680,7 +282,6 @@ li {
 .delete-btn:hover {
     background-color: #fff;
     font-weight: bold;
-    /* Hover state - turns white */
 }
 
 .edit-form-container {
@@ -956,8 +557,7 @@ table.table2 tr:nth-child(even) {
 }
 
 .custom-button:focus {
-    /* Your hover styles here */
-    background-color: lightblue;
+     background-color: lightblue;
     color: darkblue;
 }
 
@@ -1116,8 +716,6 @@ hr {
     padding: 8px;
     width: 29%;
     border: none;
-    /* Adjust spacing 
-    between buttons */
 }   
 
 .filter-container {
@@ -1168,44 +766,66 @@ hr {
     background-color: #ddd;
   }
   
+  /* .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    pointer-events: auto; 
+  } */
   .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    z-index: 999; /* Ensure it's above other content */
-    pointer-events: auto; /* Enable pointer events to prevent interaction with underlying content */
-  }
-  /* Add this CSS to your existing stylesheet or create a new one */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    pointer-events: auto; 
+}
 
-/* Style for the dropdown container */
+.edit-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+
+ 
+
+
 .form-group select {
-    width: 100%; /* Set the width to fill the container */
-    padding: 8px; /* Add padding for better appearance */
-    font-size: 16px; /* Set font size */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 4px; /* Add border radius */
-    box-sizing: border-box; /* Ensure the select box includes padding and border in its total width */
+    width: 100%;
+    padding: 8px; 
+    font-size: 16px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
   }
   
-  /* Style for the dropdown options */
   .form-group select option {
-    padding: 8px; /* Add padding for better appearance */
+    padding: 8px;
   }
   
-  /* Style for the dropdown arrow */
+ 
   .form-group select:after {
-    content: '\25BC'; /* Unicode character for a down arrow */
-    position: absolute; /* Position the arrow */
-    top: 30%; /* Adjust vertical position */
-    right: 10px; /* Adjust horizontal position */
+    content: '\25BC'; 
+    position: absolute; 
+    top: 30%; 
+    right: 10px; 
   }
   
-  /* Style for the dropdown when it's focused */
+
   .form-group select:focus {
-    outline: none; /* Remove default focus styling */
-    border-color: #007bff; /* Change border color when focused */
+    outline: none;
+    border-color: #007bff;
   }
   

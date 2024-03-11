@@ -402,9 +402,6 @@
         <div class="row">
             <div class="column1" style="background-color:#f7f4f4;">
 
-                <!-- <h5 class="recent"> Sort by Recent
-                    <img class="imgrecent" src="assets/greyarrow.png">
-                </h5> -->
                 <h2 style="margin-bottom: 2rem;">My Alarms</h2>
 
 
@@ -661,7 +658,8 @@
                                         </div>
                                     </form>
                                 </div> -->
-                                <div class="edit-form" *ngIf="showEditForm">
+                                
+                                <!-- <div class="edit-form" *ngIf="showEditForm">
                                     <h2>Edit Alarm</h2>
                                     <form (ngSubmit)="submitEditForm()" #editForm="ngForm" class="edit-form-container">
                                         <div class="form-group">
@@ -685,7 +683,36 @@
                                             <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
                                         </div>
                                     </form>
-                                </div>
+                                </div> -->
+                                <div class="overlay" *ngIf="showEditForm"></div>
+<div class="edit-form" *ngIf="showEditForm">
+    <h2>Edit Alarm</h2>
+    <form (ngSubmit)="submitEditForm()" #editForm="ngForm" class="edit-form-container">
+        <div class="form-group">
+            <label for="level">Level:</label>
+            <select id="level" name="level" [(ngModel)]="selectedAlarm.level" required>
+                <option value="LOW">LOW</option>
+                <option value="MEDIUM">MEDIUM</option>
+                <option value="HIGH">HIGH</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sprovider">Service Provider:</label>
+            <input type="text" id="sprovider" name="sprovider" [(ngModel)]="selectedAlarm.sprovider" required>
+        </div>
+        <div class="form-group">
+            <label for="well">Well:</label>
+            <input type="text" id="well" name="well" [(ngModel)]="selectedAlarm.well" required>
+        </div>
+        <div class="button-group">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<!-- Your existing content goes here -->
+
                                 
 
                                 

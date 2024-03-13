@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AlarmComponent } from './read/read.component';
 import { AppRoutingModule } from './app-routing.module';
-
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

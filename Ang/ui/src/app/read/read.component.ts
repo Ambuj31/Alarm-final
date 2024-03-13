@@ -57,6 +57,30 @@ export class AlarmComponent  implements OnInit {
     this.showEditForm = !this.showEditForm;
   }
 
+  // submitEditForm(): void {
+  //   if (this.selectedAlarm) {
+  //     const scrollPosition = window.pageYOffset;
+  //     this.AlarmService.updateAlarm(this.selectedAlarm).subscribe(
+  //       (updatedAlarm: Alarm) => {
+  //         const index = this.alarms.findIndex(a => a.id === updatedAlarm.id);
+  //         if (index !== -1) {
+  //           this.alarms[index] = updatedAlarm;
+  //         }
+  //         console.log('Alarm updated successfully');
+  //         alert('RECORD UPDATED');
+  //         this.selectedAlarm = null;
+  //         this.showEditForm = false;
+  //         if (this.alarms.length > 0) {
+  //           this.selectedAlarm = this.alarms[0];
+  //         }
+  //         window.scrollTo(0, scrollPosition); // Maintain scroll position
+  //       },
+  //       (error) => {
+  //         console.error('Error updating alarm:', error);
+  //       }
+  //     );
+  //   }
+  // }
   submitEditForm(): void {
     if (this.selectedAlarm) {
       const scrollPosition = window.pageYOffset;
@@ -65,14 +89,11 @@ export class AlarmComponent  implements OnInit {
           const index = this.alarms.findIndex(a => a.id === updatedAlarm.id);
           if (index !== -1) {
             this.alarms[index] = updatedAlarm;
+            this.selectedAlarm = updatedAlarm; // Update selectedAlarm with the updated alarm
           }
           console.log('Alarm updated successfully');
           alert('RECORD UPDATED');
-          this.selectedAlarm = null;
           this.showEditForm = false;
-          if (this.alarms.length > 0) {
-            this.selectedAlarm = this.alarms[0];
-          }
           window.scrollTo(0, scrollPosition); // Maintain scroll position
         },
         (error) => {
@@ -81,6 +102,7 @@ export class AlarmComponent  implements OnInit {
       );
     }
   }
+  
   // cancelEdit(): void {
   //   // Check if any changes were made to the selected alarm
   //   if (this.selectedAlarm && this.originalAlarm) {
